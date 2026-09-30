@@ -1,0 +1,527 @@
+/* ==================================================
+   BUTTERFLY RESTAURANT
+   ABOUT PAGE STYLES
+================================================== */
+
+
+/* ==================================================
+   ABOUT HERO
+================================================== */
+
+.about-hero {
+    position: relative;
+
+    min-height: 72vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(201, 164, 92, 0.08),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(201, 164, 92, 0.06),
+            transparent 35%
+        ),
+        #080808;
+}
+
+.about-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.72)
+        );
+}
+
+.about-hero-pattern {
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(201, 164, 92, 0.08) 1px,
+            transparent 1px
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(201, 164, 92, 0.06) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px, 110px 110px;
+
+    opacity: 0.7;
+
+    pointer-events: none;
+}
+
+.about-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(900px, 90%);
+
+    text-align: center;
+
+    padding-top: 50px;
+
+    animation: aboutHeroContent 1.2s ease forwards;
+}
+
+@keyframes aboutHeroContent {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.about-hero h1 {
+    font-size: clamp(2.6rem, 7vw, 5.5rem);
+
+    font-weight: 400;
+
+    line-height: 1.1;
+
+    color: var(--cream);
+
+    letter-spacing: 2px;
+}
+
+.about-hero-text {
+    width: min(700px, 100%);
+
+    margin: 0 auto;
+
+    color: #e1ddd3;
+
+    font-size: clamp(1rem, 2vw, 1.2rem);
+
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ==================================================
+   ABOUT CONTAINER
+================================================== */
+
+.about-container {
+    width: min(1100px, 88%);
+
+    margin: auto;
+}
+
+
+/* ==================================================
+   OUR STORY
+================================================== */
+
+.about-section {
+    padding: 130px 0;
+}
+
+.story-layout {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.4fr;
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+.about-heading h2,
+.section-heading h2,
+.promise-content h2 {
+    color: var(--cream);
+
+    font-size: clamp(2rem, 4vw, 3.5rem);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+.about-text {
+    max-width: 720px;
+}
+
+.about-text p {
+    color: var(--muted);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.95;
+
+    margin-bottom: 25px;
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ==================================================
+   PHILOSOPHY
+================================================== */
+
+.philosophy {
+    padding: 110px 0 140px;
+}
+
+.section-heading {
+    max-width: 750px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+.section-intro {
+    color: var(--muted);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+    margin-top: 25px;
+}
+
+.philosophy-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-top: 65px;
+}
+
+.philosophy-card {
+    padding: 45px 30px;
+
+    border: 1px solid rgba(201, 164, 92, 0.16);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(201, 164, 92, 0.045),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    transition:
+        transform 0.5s ease,
+        border-color 0.5s ease,
+        background 0.5s ease;
+}
+
+.philosophy-card:hover {
+    transform: translateY(-10px);
+
+    border-color: rgba(201, 164, 92, 0.5);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(201, 164, 92, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+.philosophy-number {
+    display: block;
+
+    color: var(--gold);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.philosophy-card h3 {
+    color: var(--cream);
+
+    font-size: 1.4rem;
+
+    font-weight: 400;
+
+    margin-bottom: 18px;
+}
+
+.philosophy-card p {
+    color: var(--muted);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 0.9rem;
+
+    line-height: 1.85;
+}
+
+
+/* ==================================================
+   OUR APPROACH
+================================================== */
+
+.approach-section {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(201, 164, 92, 0.08),
+            transparent 65%
+        ),
+        #050505;
+}
+
+.approach-section::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            135deg,
+            transparent 48%,
+            rgba(201, 164, 92, 0.035) 48.5%,
+            rgba(201, 164, 92, 0.035) 49%,
+            transparent 49.5%
+        );
+
+    background-size: 180px 180px;
+
+    opacity: 0.7;
+}
+
+.approach-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.45)
+        );
+}
+
+.approach-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.approach-content h2 {
+    color: var(--cream);
+
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+}
+
+.approach-content p:last-child {
+    color: var(--muted);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+}
+
+
+/* ==================================================
+   OUR PROMISE
+================================================== */
+
+.promise {
+    padding: 120px 0;
+
+    text-align: center;
+}
+
+.promise-content {
+    max-width: 800px;
+
+    text-align: center;
+}
+
+.promise-content h2 {
+    margin-bottom: 30px;
+}
+
+.promise-content > p:last-child {
+    color: var(--muted);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.95;
+}
+
+
+/* ==================================================
+   ABOUT CTA
+================================================== */
+
+.about-cta {
+    padding: 110px 0 130px;
+
+    text-align: center;
+}
+
+.about-cta h2 {
+    color: var(--cream);
+
+    font-size: clamp(2rem, 5vw, 4rem);
+
+    font-weight: 400;
+
+    line-height: 1.2;
+
+    margin-bottom: 25px;
+}
+
+.about-cta > .about-container > p:not(.section-label) {
+    width: min(650px, 100%);
+
+    margin: 0 auto 35px;
+
+    color: var(--muted);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 800px) {
+
+    .about-hero {
+        min-height: 65vh;
+    }
+
+    .about-section {
+        padding: 100px 0;
+    }
+
+    .story-layout {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .philosophy {
+        padding: 80px 0 100px;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .philosophy-card {
+        padding: 35px 25px;
+    }
+
+    .approach-section {
+        min-height: 480px;
+    }
+
+    .promise {
+        padding: 90px 0;
+    }
+
+    .about-cta {
+        padding: 90px 0 100px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .about-hero-content {
+        padding-top: 35px;
+    }
+
+    .about-hero h1 {
+        letter-spacing: 1px;
+    }
+
+    .about-hero-text {
+        font-size: 0.95rem;
+
+        line-height: 1.7;
+    }
+
+    .about-text p,
+    .section-intro,
+    .approach-content p:last-child,
+    .promise-content > p:last-child {
+        font-size: 0.92rem;
+    }
+
+                 }
